@@ -1,0 +1,129 @@
+<!--index.wxml-->
+<view class='body'>
+  <!--幻灯片  -->
+  <swiper indicator-dots="true" autoplay="true" interval="5000" duration="500">
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item.url}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <!--内容  -->
+  <view class='telephone'>
+    <image src='{{phoneImage}}' bindtap='callMe'></image>
+  </view>
+
+  <view class='icon'>
+    <block wx:for="{{menu}}">
+      <view bindtap='goTo' data-id='{{item.id}}'>
+        <image src='{{item.icon}}' mode='widthFix'></image>
+        <span>{{item.name}}</span>
+      </view>
+    </block>
+    <!-- <view bindtap='goTo'>
+        <image src='../../images/icon1.png'></image>
+        <span>简介</span>
+      </view>
+     <view bindtap='goTo'>
+        <image src='../../images/icon2.png'></image>
+        <span>加盟费</span>
+      </view>
+     <view bindtap='goTo'>
+        <image src='../../images/icon3.png'></image>
+        <span>加盟流程</span>
+      </view>
+     <view bindtap='goTo'>
+        <image src='../../images/icon4.png'></image>
+        <span>利润解析</span>
+      </view>
+       <view bindtap='goTo'>
+        <image src='../../images/icon5.png'></image>
+        <span>项目简介</span>
+      </view> -->
+  </view>
+
+  <view class='products'>
+    <view class='title'>
+      产品中心
+    </view>
+    <view class='picture'>
+      <block wx:for="{{product}}">
+        <view class='myProduct'>
+          <image src="{{item.url}}"></image>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <view class='uion'>
+    <view class='title'>
+      招商加盟
+    </view>
+    <view class='big_picture'>
+      <image src='{{joinImage}}' mode='widthFix'></image>
+      <image src='{{joinProcess}}' mode='widthFix'></image>
+    </view>
+  </view>
+
+  <form bindsubmit="formSubmit">
+    <view class='biaodan'>
+      <view class="weui-cells weui-cells_after-title single">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__bd">
+            <input name="name" class="weui-input" placeholder="姓名" type='text' value='{{clear}}' />
+          </view>
+        </view>
+      </view>
+      <view class="weui-cells weui-cells_after-title single">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__bd">
+            <input name="phone" class="weui-input" placeholder="手机号" type='number' value='{{clear}}' />
+          </view>
+        </view>
+      </view>
+      <view class="weui-cells weui-cells_after-title single">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__bd">
+            <span focus="{{focus}}" bindfocus="open" bindtap="showView" class='weui-input'>
+              {{province}}-{{city}}-{{county}}
+            </span>
+          </view>
+        </view>
+      </view>
+
+      <view wx:if="{{condition}}" class="citypicker">
+        <picker-view indicator-style="" style="width: 100%; height: 170rpx;" value="{{value}}" bindchange="bindChange" class="citybody">
+          <view class="cityheader">
+            <view bindtap="open" class="city-cancel">取消</view>
+            <view bindtap="open" class="city-true">确定</view>
+          </view>
+          <picker-view-column>
+            <view wx:for="{{provinces}}" wx:key="item" style="line-height: 34px;padding-left:30px;">{{item}}</view>
+          </picker-view-column>
+          <picker-view-column>
+            <view wx:for="{{citys}}" wx:key="item" style="line-height: 34px;padding-left:30px;">{{item}}</view>
+          </picker-view-column>
+          <picker-view-column>
+            <view wx:for="{{countys}}" wx:key="item" style="line-height: 34px;padding-left:30px;">{{item}}</view>
+          </picker-view-column>
+        </picker-view>
+      </view>
+
+      <view class="weui-cells weui-cells_after-title single">
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__bd">
+            <input name="detailedAddress" class="weui-input" placeholder="补充详细地址" value='{{clear}}' />
+          </view>
+        </view>
+      </view>
+
+      <view class="weui-btn-area">
+        <button class="weui-btn" form-type='submit' type="primary">立即提交 </button>
+      </view>
+    </view>
+  </form>
+
+  <view class='consault'>
+    <image src='{{imgbottom}}' bindtap='callMe'></image>
+  </view>
+</view>

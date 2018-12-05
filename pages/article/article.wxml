@@ -1,0 +1,23 @@
+<import src="../../wxParse/wxParse.wxml"/> 
+
+<view class='body'>
+   <view class='first_img'>
+      <image src='{{page.titleImage}}'></image>
+   </view>
+   <view class='page_hd'>
+      <view class='weui-article'>
+         <view class='weui-article__section'>
+            <view class='weui-article__p'>
+               <view class="wxParse">
+               <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+               </view>
+            </view>
+         </view>
+      </view>
+   </view>
+   <button class='share' open-type="share">
+       <image src='../../images/share.png'></image>
+       <span>分享</span>
+   </button>
+
+</view>

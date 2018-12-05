@@ -1,0 +1,185 @@
+/**index.wxss**/
+
+/*一些样式覆盖两个框架的样式  */
+
+.body {
+  background-color: #cfcfcf;
+}
+
+/*幻灯片高度  */
+
+swiper {
+  height: 530rpx !important;
+}
+
+swiper-item image {
+  width: 100%; 
+  height: 100%;
+  /*宽度占全屏为750rpx */
+}
+
+.telephone {
+  background-color: white;
+  margin-bottom: 10rpx;
+}
+
+.telephone image {
+  width:100%; 
+  height: 200rpx;
+}
+
+.icon {
+  height: 200rpx;
+  background-color: white;
+  margin-bottom: 10rpx;
+}
+
+.icon view {
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+}
+
+.icon view span {
+  font-size: 25rpx;
+}
+
+.icon image {
+  margin-top: 20rpx;
+  width: 75%;
+}
+
+.products {
+  overflow: hidden;
+  /* width: 750rpx; */
+  height: auto;
+  background-color: white;
+}
+
+.products .title {
+  /* height: 100rpx; */
+  background-color: white;
+  text-align: center;
+  font-size: 50rpx;
+  line-height: 90rpx;  
+  color: #32cd32;
+  border-bottom: 10rpx #cfcfcf solid; 
+}
+
+.picture {
+  margin-top: 10rpx;
+  height: auto;
+  background-color: white;
+}
+
+.myProduct {
+  background-color: white;
+  float: left;
+  border: 1px white solid;
+  margin-left: 15rpx;
+}
+
+.myProduct image {
+  width: 350rpx;
+  height: 200rpx;
+}
+
+.uion {
+  margin-top: 10rpx;
+}
+
+.uion .title {
+  /* height: 100rpx; */
+  background-color: white;
+  text-align: center;
+  font-size: 50rpx;
+  line-height: 90rpx;
+  color: #32cd32;
+  margin-bottom: 10rpx; 
+}
+
+.uion .big_picture {
+  background-color: #32cd32;
+  text-align: center;
+}
+
+.uion .big_picture image {
+  margin-top: 20rpx;
+  width: 95%;
+}
+
+.biaodan {
+  height: 750rpx;
+}
+
+.biaodan .single {
+  margin: 30rpx;
+}
+
+.consault image {
+  height: 150rpx;
+   width: 100%; 
+  position: fixed;
+  bottom: 0px;
+  z-index: 2;
+}
+
+/*联动选择器  */
+
+.citypickers {
+  position: fixed;
+  height: 100%;
+   width: 100%; 
+  min-height: 100%;
+  background-color: red;
+}
+
+.citypicker {
+}
+
+.citybody {
+  position: fixed;
+  bottom: 0px;
+  z-index: 999;
+  background-color: white;
+  height: 400rpx !important;
+}
+
+.cityheader {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: 4;
+}
+
+.city-cancel {
+  float: left;
+  margin: 20rpx;
+  color: #818181;
+}
+
+.city-true {
+  float: right;
+  margin: 20rpx;
+  color: #2fb42e;
+}
+
+.section .picker {
+  background-color: #fff;
+  border-bottom: 1px #d9d9d9 solid;
+  border-top: 1px #d9d9d9 solid;
+  padding: 20rpx;
+}
+
+span {
+  display: block;
+  height: 1.4rem;
+  text-overflow: clip;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: UICTFontTextStyleBody;
+  min-height: 1.4rem;
+}
+.weui-input{
+  color: #999;
+}

@@ -1,0 +1,40 @@
+@import "../../wxParse/wxParse.wxss";
+.first_img image{
+  display: block;
+  width: 300rpx;
+  height: 300rpx;
+  margin: 20rpx auto;
+}
+.second_img image{
+  display: block;
+  width: 300rpx;
+  height: 300rpx;
+  margin: 20rpx auto;
+}
+.context{
+  font-size: 35rpx;
+  line-height: 50rpx;
+}
+.share{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  background-color: #999;
+  position: fixed;
+  right: 0rpx;
+  top: 850rpx;
+  opacity: .6;
+}
+.share image{
+  width: 60rpx;
+  height: 60rpx;
+  display: block;
+  margin: 10rpx auto; 
+}
+.share span{
+  display: block;
+  text-align: center;
+  font-size: 25rpx;
+  color: #fff;
+  margin-top: -20rpx;
+}
